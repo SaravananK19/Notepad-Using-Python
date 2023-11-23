@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog #provide dialog boxes for file related operation
 
 class Notepad(tk.Tk):
     def __init__(self, *args, **kwargs):
