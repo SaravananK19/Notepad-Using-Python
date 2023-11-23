@@ -3,7 +3,7 @@ from tkinter import filedialog
 
 class Notepad(tk.Tk):
     def __init__(self, *args, **kwargs):
-        tk.Tk.__init__(self, *args, **kwargs)
+        tk.Tk.__init__(self, *args, **kwargs)#setting up initial configuration for the notepad window
 
         # Set the title for the notepad
         self.title("Notepad")
@@ -18,7 +18,7 @@ class Notepad(tk.Tk):
 
         # Create a file menu
         file_menu = tk.Menu(self.menu)
-        self.menu.add_cascade(label="File", menu=file_menu)
+        self.menu.add_cascade(label="File", menu=file_menu) #cascade- use to add a sub-menu. "File"  is submenu of menu cls.
         file_menu.add_command(label="New", command=self.new_file)
         file_menu.add_command(label="Open", command=self.open_file)
         file_menu.add_command(label="Save", command=self.save_file)
@@ -32,7 +32,7 @@ class Notepad(tk.Tk):
         edit_menu.add_command(label="Copy", command=self.copy)
         edit_menu.add_command(label="Paste", command=self.paste)
 
-    def new_file(self):
+    def new_file(self): #when new is selected it clear the text widgets and set title to Nodepad
         self.text.delete("1.0", "end")
         self.title("Notepad")
 
@@ -64,4 +64,4 @@ class Notepad(tk.Tk):
 
 if __name__ == "__main__":
     notepad = Notepad()
-    notepad.mainloop()
+    notepad.mainloop() #starts the tkinter main loop using mainloop() method
