@@ -1,4 +1,3 @@
-# Find More Python Projects at Codewithcurious.com
 import tkinter as tk
 from tkinter import filedialog
 
